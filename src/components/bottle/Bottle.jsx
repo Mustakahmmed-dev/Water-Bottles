@@ -1,8 +1,10 @@
 import './Bottle.css';
 
-export default function Bottle({bottle}){
+export default function Bottle({bottle, handleAddToCartBtn}){
+    // console.log(bottle)
 
-    console.log(bottle)
+   
+
     return (
 
          <div className="bottle-card">
@@ -12,7 +14,7 @@ export default function Bottle({bottle}){
                 <p>Price: {bottle.price} </p>
                 <p>Stock: {bottle.stock} </p>
             </div>
-            <button>Add To Cart</button>
+            <button onClick={() => handleAddToCartBtn(bottle)}>Add To Cart</button>
        </div>
     )
 }
